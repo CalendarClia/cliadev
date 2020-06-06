@@ -47,12 +47,12 @@ const integromatApplicationApproveUrl = 'https://hook.integromat.com/hnhcj7fw32v
 const integromatCertificateApproveUrl = 'https://hook.integromat.com/fcdk6d818l3ullql6h0bvpx2rpruz72f';
 const integromatCreateCertificateUrl = 'https://hook.integromat.com/va4jvzewliusxrxowhuywiq4cktusudo';
 
-LazyLoad.js(src = "https://cdn.jsdelivr.net/gh/calendarclie/cliadev@1.01/knackappvariables.js");
+LazyLoad.js(src = "https://cdn.jsdelivr.net/gh/calendarclia/cliadev@1.01/knackappvariables.js");
 
 // Load CLIA Customized JavaScript Code
 KnackInitAsync = function ($, callback) {
   window.$ = $;
-  LazyLoad.js(["https://cdn.jsdelivr.net/gh/calendarclie/cliadev@1.01/cliajavascript.js"], function() {
+  LazyLoad.js(["https://cdn.jsdelivr.net/gh/calendarclia/cliadev@1.01/cliajavascript.js"], function() {
     console.log('Loaded external files!');
       callback();
   });

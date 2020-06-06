@@ -2217,7 +2217,7 @@ async function integromatCreateCertificate(knackId) {
   //const url = 'https://hook.integromat.com/va4jvzewliusxrxowhuywiq4cktusudo';
   data = { 'knackId': knackId };
   const result = await $.ajax({
-    /url: url,
+    //url: url,
     url: integromatCreateCertificateUrl,
     type: 'POST',
     data: data,
