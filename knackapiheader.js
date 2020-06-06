@@ -38,10 +38,11 @@ LazyLoad.js(['https://global.localizecdn.com/localize.js'], function () {
 // Sweet alert JavaScript Library load
 LazyLoad.js(src = "https://cdn.jsdelivr.net/npm/sweetalert2@8");
 
-   KnackInitAsync = function ($, callback) {
-     window.$ = $;
-     LazyLoad.js(["https://cdn.jsdelivr.net/gh/calendarclie/cliadev@1.00/cliajavascript.js"], function() {
-        console.log('Loaded external files!');
-        callback();
-     });
-   }
+// Load CLIA Customized JavaScript Code
+KnackInitAsync = function ($, callback) {
+  window.$ = $;
+  LazyLoad.js(["https://cdn.jsdelivr.net/gh/calendarclie/cliadev@1.00/cliajavascript.js"], function() {
+    console.log('Loaded external files!');
+      callback();
+  });
+}
