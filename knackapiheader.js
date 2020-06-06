@@ -20,6 +20,9 @@ function GetIEVersion() {
     return 0; //It is not IE
 }
 
+// Debug on (1) or off (0)
+const debug_on = 1;
+
 // Localizejs Translation Code
 LazyLoad.js(['https://global.localizecdn.com/localize.js'], function () {
   !function (a) { if (!a.Localize) { a.Localize = {}; for (var e = ["translate", "untranslate", "phrase", "initialize", "translatePage", "setLanguage", "getLanguage", "detectLanguage", "getAvailableLanguages", "untranslatePage", "bootstrap", "prefetch", "on", "off"], t = 0; t < e.length; t++)a.Localize[e[t]] = function () { } } }(window);
@@ -38,10 +41,18 @@ LazyLoad.js(['https://global.localizecdn.com/localize.js'], function () {
 // Sweet alert JavaScript Library load
 LazyLoad.js(src = "https://cdn.jsdelivr.net/npm/sweetalert2@8");
 
+// Clia Variables
+const integromatSimilarityKeyUrl = 'https://hook.integromat.com/rc148bratqo8k2f20ml8oyrkybfxoqaf';
+const integromatApplicationApproveUrl = 'https://hook.integromat.com/hnhcj7fw32vjgef7ov8ixiz8ab463v7k';
+const integromatCertificateApproveUrl = 'https://hook.integromat.com/fcdk6d818l3ullql6h0bvpx2rpruz72f';
+const integromatCreateCertificateUrl = 'https://hook.integromat.com/va4jvzewliusxrxowhuywiq4cktusudo';
+
+LazyLoad.js(src = "https://cdn.jsdelivr.net/gh/calendarclie/cliadev@1.01/knackappvariables.js");
+
 // Load CLIA Customized JavaScript Code
 KnackInitAsync = function ($, callback) {
   window.$ = $;
-  LazyLoad.js(["https://cdn.jsdelivr.net/gh/calendarclie/cliadev@1.00/cliajavascript.js"], function() {
+  LazyLoad.js(["https://cdn.jsdelivr.net/gh/calendarclie/cliadev@1.01/cliajavascript.js"], function() {
     console.log('Loaded external files!');
       callback();
   });

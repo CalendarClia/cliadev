@@ -2,7 +2,7 @@
 var app_id = Knack.app.id;
 var user = Knack.getUserToken();
 
-const debug_on = 1;
+//const debug_on = 1;
 /*
 var headers = {
   'X-Knack-Application-ID': Knack.application_id,
@@ -29,7 +29,7 @@ function log_alert(data) {
     alert(data);
   }
 }
-
+/*
 const max_liability_reached_view = 'view_449';
 
 const years_view = 'view_728'; //Done
@@ -254,6 +254,7 @@ const claims_excess_res_other_field = 'field_989';
 const claims_excess_res_recov_reins_field = 'field_990';
 const claims_excess_res_recov_other_field = 'field_991';
 const claims_excess_res_deductible_field = 'field_993';
+*/
 
 const closed_test = [claims_ls_res_indemnity_field, claims_ls_res_adjusting_field, claims_ls_res_expert_legals_field, claims_ls_res_legal_field, claims_ls_res_other_field, claims_ls_res_recov_reins_field, claims_ls_res_recov_other_field, claims_ls_res_deductible_field, claims_clia_res_adjusting_field, claims_clia_res_experts_legal_field, claims_clia_res_other_field, claims_clia_res_recov_reins_field, claims_clia_res_recov_other_field, claims_clia_res_deductible_field, claims_excess_res_indemnity_field, claims_excess_res_adjusting_field, claims_excess_res_experts_legal_field, claims_excess_res_legal_field, claims_excess_res_other_field, claims_excess_res_recov_reins_field, claims_excess_res_deductible_field, claims_excess_res_recov_other_field,];
 const closed_test_num = [claims_clia_res_indemnity_field_raw, claims_clia_res_legal_field_raw];
@@ -1761,10 +1762,11 @@ $(document).on('knack-record-create.' + add_lawyer_view, function (event, view, 
 // Call Integromat Get Similarity Key
 async function getSimilarityKey(knackId, requestType, requestValue) {
   log_console('Function: getSimilarityKey');
-  const url = 'https://hook.integromat.com/rc148bratqo8k2f20ml8oyrkybfxoqaf';
+  //const url = 'https://hook.integromat.com/rc148bratqo8k2f20ml8oyrkybfxoqaf';
   data = { 'knackId': knackId, 'Type': requestType, 'Value': requestValue };
   const result = await $.ajax({
-    url: url,
+    //url: url,
+    url: integromatSimilarityKeyUrl,
     type: 'POST',
     data: data,
   }).done(function (responseData) {
@@ -1890,10 +1892,11 @@ async function updateKnackRecord(url, data) {
 }
 // Call Integromat Approve Record Check for Applications
 async function approveApplication(knackId) {
-  const url = 'https://hook.integromat.com/hnhcj7fw32vjgef7ov8ixiz8ab463v7k';
+  //const url = 'https://hook.integromat.com/hnhcj7fw32vjgef7ov8ixiz8ab463v7k';
   data = { 'knackId': knackId };
   const result = await $.ajax({
-    url: url,
+    //url: url,
+    url: integromatApplicationApproveUrl,
     type: 'POST',
     //headers: {
     //  'Authorization': Knack.getUserToken(),
@@ -1914,10 +1917,11 @@ async function approveApplication(knackId) {
 }
 // Call Integromat Approve Record Check for Certificates
 async function approveCertificate(knackId) {
-  const url = 'https://hook.integromat.com/fcdk6d818l3ullql6h0bvpx2rpruz72f';
+  //const url = 'https://hook.integromat.com/fcdk6d818l3ullql6h0bvpx2rpruz72f';
   data = { 'knackId': knackId };
   const result = await $.ajax({
-    url: url,
+    //url: url,
+    url: integromatCertificateApproveUrl,
     type: 'POST',
     //headers: {
     //  'Authorization': Knack.getUserToken(),
@@ -2210,10 +2214,11 @@ async function generateCertificate(knackId) {
 }
 
 async function integromatCreateCertificate(knackId) {
-  const url = 'https://hook.integromat.com/va4jvzewliusxrxowhuywiq4cktusudo';
+  //const url = 'https://hook.integromat.com/va4jvzewliusxrxowhuywiq4cktusudo';
   data = { 'knackId': knackId };
   const result = await $.ajax({
-    url: url,
+    /url: url,
+    url: integromatCreateCertificateUrl,
     type: 'POST',
     data: data,
   }).done(function (responseData) {
