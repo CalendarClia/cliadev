@@ -1,17 +1,17 @@
 // Localizejs Translation Code
-LazyLoad.js(['https://global.localizecdn.com/localize.js'], function () {
-  !function (a) { if (!a.Localize) { a.Localize = {}; for (var e = ["translate", "untranslate", "phrase", "initialize", "translatePage", "setLanguage", "getLanguage", "detectLanguage", "getAvailableLanguages", "untranslatePage", "bootstrap", "prefetch", "on", "off"], t = 0; t < e.length; t++)a.Localize[e[t]] = function () { } } }(window);
+//LazyLoad.js(['https://global.localizecdn.com/localize.js'], function () {
+//  !function (a) { if (!a.Localize) { a.Localize = {}; for (var e = ["translate", "untranslate", "phrase", "initialize", "translatePage", "setLanguage", "getLanguage", "detectLanguage", "getAvailableLanguages", "untranslatePage", "bootstrap", "prefetch", "on", "off"], t = 0; t < e.length; t++)a.Localize[e[t]] = function () { } } }(window);
 
-  Localize.initialize({
-    key: 'OoHqlrh1RISgX',
-    rememberLanguage: true,
-    saveNewPhrases: false
-  });
+//  Localize.initialize({
+//    key: 'OoHqlrh1RISgX',
+//    rememberLanguage: true,
+//    saveNewPhrases: false
+//  });
   /*Localize.initialize({
     key: 'OoHqlrh1RISgX',
     rememberLanguage: true
   });*/
-});
+//});
 
 // Sweet alert JavaScript Library load
 LazyLoad.js(src = "https://cdn.jsdelivr.net/npm/sweetalert2@8");
